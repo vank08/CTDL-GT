@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	int n;
+	int n = 1;
 	cin >> n;
 
 	Foods a[100];
