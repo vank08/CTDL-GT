@@ -19,6 +19,10 @@ public:
 	void setWeight(double weight);
 	void setCalories(double calories);
 
+	string getName();
+	double getWeight();
+	double getCalories();
+
 	virtual ~Foods() = default;
 };
 

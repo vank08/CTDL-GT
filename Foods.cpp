@@ -29,3 +29,15 @@ void Foods::setWeight(double weight) {
 void Foods::setCalories(double calories) {
 	this->calories = calories;
 }
+
+string Foods::getName() {
+	return this->name;
+}
+
+double Foods::getWeight() {
+	return this->weight;
+}
+
+double Foods::getCalories() {
+	return this->calories;
+}
