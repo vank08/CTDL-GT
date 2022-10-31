@@ -1,0 +1,55 @@
+# Pseudocode for Problem 146:
+Program findCeil(nums[low,high],x) and findFloor(nums[low,high],x)
+**INPUT:**
+nums=array[i];
+Number x;
+**OUTPUT:**
+Number x ?ceil?floor
+findCeil(nums[low, high], x)
+mid= (low+high)/2
+
+
+If x == nums[low],then nums[low] -> ceiling.
+
+If x >= nums[high],then its ceiling doesn't exist.
+
+If x == mid,then it is the ceiling.
+
+If x > mid,then the ceiling exists in the right subarray nums[mid+1…high].
+
+If x <  mid,then the ceiling exists in the left subarray nums[low…mid]. 
+
+Here, include mid as part of the left subarray as the middle element can also be ceiling.
+
+findFloor(nums[low, high], x)
+
+If x < nums[low],then its floor doesn’t exist.
+
+If x > nums[high],then it is the floor.
+
+If x == mid,then it is the floor.
+
+If x > mid,then the floor exists in the right subarray 
+nums[mid…high]. 
+
+Here, include mid as part of the right subarray as the middle element can also be the floor.
+
+If x < mid, then the floor exists in the left subarray nums[low…mid-1].
+
+Here is the main function for you testing the program:
+```clike 
+int main(void)
+{
+    int nums[] = { 1, 4, 6, 8, 9 };
+    int n = sizeof(nums) / sizeof(nums[0]);
+ 
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("Number %2d —> ceiling is %2d, floor is %2d\n", i,
+                    findCeiling(nums, 0, n - 1, i),
+                    findFloor(nums, 0, n - 1, i));
+    }
+ 
+    return 0;
+}
+```
